@@ -1,80 +1,60 @@
-# wled-Ambilight-equalizer
- small and easy project with wled to create a nice ambilighte and equalizer for tv 
+# WLED Ambilight & Equalizer for TV
 
+This is a small DIY project I made using WLED and a NodeMCU ESP8266.
 
-# WLED Ambilight & TV Equalizer
+The goal was to add ambient RGB lighting behind my TV and also use audio-reactive effects to make movies, music and games more enjoyable.
 
-A simple DIY project using WLED and an ESP8266 to create an Ambilight and audio-reactive LED effect for a TV setup.
-
-## Overview
-
-This project adds dynamic RGB lighting behind a TV using WS2812B LEDs. The LEDs can display WLED effects, ambient lighting, and audio-reactive visualizations through Prismatik.
-
-The project was completed in less than 24 hours and required only a few common components.
-
-## Features
-
-- Ambilight effect for TV
-- Audio-reactive equalizer effects
-- Wireless control via WLED web interface
-- Custom colors and animations
-- Low-cost and beginner-friendly
+The whole project took me less than 24 hours to complete.
 
 ## Components
 
 - NodeMCU ESP8266
 - WS2812B LED Strip
-- 12V 5A Switching Power Supply
+- 12V 5A Switching Adapter
 
 ## Software
 
 - WLED
 - Prismatik
 
-## Project Photos
+## What it does
 
-### Final Setup
-![Final Setup](images/final_setup.jpg)
+- Creates an Ambilight effect behind the TV
+- Supports many WLED lighting effects
+- Can react to music and sound
+- Can be controlled from a phone through WLED
 
-### Behind the TV
-![Behind TV](images/behind_tv.jpg)
+## Some challenges
 
-### WLED Interface
-![WLED Interface](images/wled_interface.jpg)
+The hardest parts were:
 
-## Installation
+- Managing the cables behind the TV
+- Placing the LED strip correctly
+- Setting up Prismatik and WLED to work together
 
-1. Flash WLED firmware to the ESP8266.
-2. Connect the WS2812B LED strip to the ESP8266.
-3. Configure Wi-Fi settings in WLED.
-4. Install Prismatik on your computer.
-5. Connect Prismatik to WLED.
-6. Configure screen capture zones.
-7. Enjoy the Ambilight effect.
+After some trial and error everything worked as expected.
 
-## Challenges
+## What I learned
 
-- Cable management behind the TV
-- LED placement for uniform lighting
-- Initial WLED configuration
-- Prismatik synchronization setup
+Through this project I learned more about:
 
-## What I Learned
+- ESP8266
+- WLED
+- Addressable LEDs
+- Basic networking and device control
+- Project documentation
 
-- ESP8266 basics
-- WLED configuration
-- Addressable LED control
-- Ambilight systems
-- Network-based device control
-- DIY project documentation
+## Photos
 
-## Future Improvements
+Project photos are available below.
 
-- Better cable routing
-- Custom enclosure for ESP8266
-- More advanced audio-reactive effects
-- Integration with Home Assistant
+## Future ideas
 
-## Author
+In the future I may:
 
-Developed by Emad Khansari
+- Improve cable management
+- Add a better enclosure for the controller
+- Try more advanced WLED integrations
+
+This was a fun weekend project and a good learning experience.
+
