@@ -1,60 +1,175 @@
 # WLED Ambilight & Equalizer for TV
 
-This is a small DIY project I made using WLED and a NodeMCU ESP8266.
+A simple DIY project I built using a NodeMCU ESP8266, WS2812B LEDs and WLED to create an Ambilight and audio-reactive lighting system for my TV.
 
-The goal was to add ambient RGB lighting behind my TV and also use audio-reactive effects to make movies, music and games more enjoyable.
+The project was completed in less than 24 hours and was mainly built for learning and experimenting with addressable LEDs, WLED and screen-reactive lighting.
 
-The whole project took me less than 24 hours to complete.
+---
+
+## Demo
+
+### Ambilight Mode
+
+
+https://drive.google.com/file/d/1IjjZe9JuRyiNSOZ7kW9rRZ--AscH4l0k/view?usp=drive_link
+Uploading InShot_20260607_161602040.mp4…
+
+
+### Audio Reactive / Equalizer Mode
+
+https://drive.google.com/file/d/1-N6sB9vBnJbN9XQKedMcX9D05hrH6lF1/view?usp=drive_link
+---
 
 ## Components
 
-- NodeMCU ESP8266
-- WS2812B LED Strip
-- 12V 5A Switching Adapter
+* NodeMCU ESP8266
+* WS2812B LED Strip
+* 12V 5A Switching Adapter
+* TV
+* USB Cable
+
+---
 
 ## Software
 
-- WLED
-- Prismatik
+* WLED
+* Prismatik
 
-## What it does
+Useful links:
 
-- Creates an Ambilight effect behind the TV
-- Supports many WLED lighting effects
-- Can react to music and sound
-- Can be controlled from a phone through WLED
+WLED Documentation:
+https://kno.wled.ge/
 
-## Some challenges
+WLED GitHub:
+https://github.com/wled/WLED
 
-The hardest parts were:
+Prismatik Releases:
+https://github.com/psieg/Lightpack/releases
 
-- Managing the cables behind the TV
-- Placing the LED strip correctly
-- Setting up Prismatik and WLED to work together
+Prismatik is an open-source screen capture software that can send colors from your display to WLED devices for Ambilight effects.
 
-After some trial and error everything worked as expected.
-
-## What I learned
-
-Through this project I learned more about:
-
-- ESP8266
-- WLED
-- Addressable LEDs
-- Basic networking and device control
-- Project documentation
+---
 
 ## Photos
 
-Project photos are available below.
+### Power Supply
 
-## Future ideas
+![Power Supply](images/power-supply.jpg)
 
-In the future I may:
+### NodeMCU ESP8266
 
-- Improve cable management
-- Add a better enclosure for the controller
-- Try more advanced WLED integrations
+![ESP8266](images/esp8266.jpg)
 
-This was a fun weekend project and a good learning experience.
+### LED Strip
 
+![LED Strip](images/led-strip.jpg)
+
+### Final Setup
+
+![Final Setup](images/final-setup.jpg)
+
+### WLED Interface
+
+![WLED Interface](images/wled-interface.jpg)
+
+---
+
+## Wiring
+
+My wiring setup was very simple:
+
+WS2812B -> ESP8266
+
+* DIN -> D4 (GPIO2)
+* GND -> GND
+* VCC -> Power Supply
+
+ESP8266
+
+* Powered through USB
+
+Important:
+Make sure the ESP8266 GND and LED strip GND are connected together.
+
+### Wiring Diagram
+
+Power Supply (+) ------> LED VCC
+
+Power Supply (-) ------> LED GND
+
+LED DIN -------------> ESP8266 D4
+
+ESP8266 GND ---------> LED GND
+
+---
+
+## Installation
+
+### 1. Flash WLED
+
+Install WLED on the ESP8266.
+
+### 2. Connect LEDs
+
+Connect the LED strip according to the wiring above.
+
+### 3. Configure WLED
+
+Open the WLED web interface and:
+
+* Connect to WiFi
+* Set LED count
+* Select GPIO pin
+
+### 4. Install Prismatik
+
+Download and install Prismatik.
+
+### 5. Configure Screen Zones
+
+Create screen capture zones around your display.
+
+### 6. Connect Prismatik to WLED
+
+Set the WLED device IP address inside Prismatik.
+
+### 7. Test
+
+Play a movie, game or music and verify that the LEDs react correctly.
+
+---
+
+## Challenges
+
+Some problems I faced during the project:
+
+* Cable management behind the TV
+* LED placement
+* Prismatik setup
+* Getting smooth Ambilight behavior
+
+Most of them were solved through testing and adjusting settings.
+
+---
+
+## What I Learned
+
+* ESP8266 basics
+* WLED configuration
+* Addressable LEDs
+* Ambilight systems
+* Network device control
+* Project documentation
+
+---
+
+## Future Improvements
+
+* Better cable management
+* Custom enclosure for the ESP8266
+* More advanced audio-reactive effects
+* Better mounting system
+
+---
+
+This was a fun project and a great way to learn more about WLED, ESP8266 and addressable LEDs.
