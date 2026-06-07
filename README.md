@@ -12,12 +12,12 @@ The project was completed in less than 24 hours and was mainly built for learnin
 
 
 https://drive.google.com/file/d/1IjjZe9JuRyiNSOZ7kW9rRZ--AscH4l0k/view?usp=drive_link
-Uploading InShot_20260607_161602040.mp4…
 
 
 ### Audio Reactive / Equalizer Mode
 
 https://drive.google.com/file/d/1-N6sB9vBnJbN9XQKedMcX9D05hrH6lF1/view?usp=drive_link
+
 ---
 
 ## Components
